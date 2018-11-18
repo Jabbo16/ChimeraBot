@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{69A5151C-4ABF-4B07-B3C4-A28A31733D64}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Iron</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;IRON_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(BWAPI_DIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(BWAPI_DIR)/lib/BWAPId.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;IRON_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(BWAPI_DIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(BWAPI_DIR)/lib/BWAPI.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="bwem\doc\html\about.html" />
+    <None Include="bwem\doc\html\download.html" />
+    <None Include="bwem\doc\html\faq.html">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bwem\doc\html\features.html" />
+    <None Include="bwem\doc\html\help.html" />
+    <None Include="bwem\doc\html\index.html">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bwem\doc\html\interactiveIron.html">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bwem\doc\html\Iron.html">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bwem\doc\html\start.html" />
+    <None Include="bwem\doc\html\Stone.html">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bwem\doc\html\style.css" />
+    <None Include="C:\Program Files (x86)\StarCraft\bwapi-data\bwapi.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="bwem\doc\html\Andromeda.png" />
+    <Image Include="bwem\doc\html\Baby Steps.png" />
+    <Image Include="bwem\doc\html\Great Barrier Reef.png" />
+    <Image Include="bwem\doc\html\Heartbreak Ridge.png" />
+    <Image Include="bwem\doc\html\Iron.jpg" />
+    <Image Include="bwem\doc\html\Ride of Valkyries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="behavior\airSniping.cpp" />
+    <ClCompile Include="behavior\collecting.cpp" />
+    <ClCompile Include="behavior\demolishing.cpp" />
+    <ClCompile Include="behavior\dropping.cpp" />
+    <ClCompile Include="behavior\dropping1T.cpp" />
+    <ClCompile Include="behavior\dropping1T1V.cpp" />
+    <ClCompile Include="behavior\fighting.cpp" />
+    <ClCompile Include="behavior\healing.cpp" />
+    <ClCompile Include="behavior\killingMine.cpp" />
+    <ClCompile Include="behavior\blocking.cpp" />
+    <ClCompile Include="behavior\checking.cpp" />
+    <ClCompile Include="behavior\destroying.cpp" />
+    <ClCompile Include="behavior\executing.cpp" />
+    <ClCompile Include="behavior\guarding.cpp" />
+    <ClCompile Include="behavior\laying.cpp" />
+    <ClCompile Include="behavior\layingBack.cpp" />
+    <ClCompile Include="behavior\patrollingBases.cpp" />
+    <ClCompile Include="behavior\behavior.cpp" />
+    <ClCompile Include="behavior\behaviorType.cpp" />
+    <ClCompile Include="behavior\chasing.cpp" />
+    <ClCompile Include="behavior\constructing.cpp" />
+    <ClCompile Include="behavior\defaultBehavior.cpp" />
+    <ClCompile Include="behavior\exploring.cpp" />
+    <ClCompile Include="behavior\fleeing.cpp" />
+    <ClCompile Include="behavior\harassing.cpp" />
+    <ClCompile Include="behavior\kiting.cpp" />
+    <ClCompile Include="behavior\mining.cpp" />
+    <ClCompile Include="behavior\raiding.cpp" />
+    <ClCompile Include="behavior\razing.cpp" />
+    <ClCompile Include="behavior\refining.cpp" />
+    <ClCompile Include="behavior\repairing.cpp" />
+    <ClCompile Include="behavior\retraiting.cpp" />
+    <ClCompile Include="behavior\scouting.cpp" />
+    <ClCompile Include="behavior\sieging.cpp" />
+    <ClCompile Include="behavior\sniping.cpp" />
+    <ClCompile Include="behavior\supplementing.cpp" />
+    <ClCompile Include="behavior\vchasing.cpp" />
+    <ClCompile Include="behavior\walking.cpp" />
+    <ClCompile Include="bwem\EasyBMP_1.06\EasyBMP.cpp" />
+    <ClCompile Include="bwem\src\area.cpp" />
+    <ClCompile Include="bwem\src\base.cpp" />
+    <ClCompile Include="bwem\src\bwapiExt.cpp" />
+    <ClCompile Include="bwem\src\bwem.cpp" />
+    <ClCompile Include="bwem\src\cp.cpp" />
+    <ClCompile Include="bwem\src\examples.cpp" />
+    <ClCompile Include="bwem\src\exampleWall.cpp" />
+    <ClCompile Include="bwem\src\graph.cpp" />
+    <ClCompile Include="bwem\src\gridMap.cpp" />
+    <ClCompile Include="bwem\src\map.cpp" />
+    <ClCompile Include="bwem\src\mapDrawer.cpp" />
+    <ClCompile Include="bwem\src\mapImpl.cpp" />
+    <ClCompile Include="bwem\src\mapPrinter.cpp" />
+    <ClCompile Include="bwem\src\neutral.cpp" />
+    <ClCompile Include="bwem\src\tiles.cpp" />
+    <ClCompile Include="bwem\src\utils.cpp" />
+    <ClCompile Include="bwem\src\winutils.cpp" />
+    <ClCompile Include="debug.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="infoDrawer.cpp" />
+    <ClCompile Include="interactive.cpp" />
+    <ClCompile Include="Iron.cpp" />
+    <ClCompile Include="myassert.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="strategy\baseDefense.cpp" />
+    <ClCompile Include="strategy\berserker.cpp" />
+    <ClCompile Include="strategy\cannonRush.cpp" />
+    <ClCompile Include="strategy\dragoonRush.cpp" />
+    <ClCompile Include="strategy\firstDepotPlacement.cpp" />
+    <ClCompile Include="strategy\goliathRush.cpp" />
+    <ClCompile Include="strategy\lateCore.cpp" />
+    <ClCompile Include="strategy\massHydra.cpp" />
+    <ClCompile Include="strategy\protossGreedy.cpp" />
+    <ClCompile Include="strategy\secondDepotPlacement.cpp" />
+    <ClCompile Include="strategy\stone.cpp" />
+    <ClCompile Include="strategy\terranFastExpand.cpp" />
+    <ClCompile Include="strategy\walling.cpp" />
+    <ClCompile Include="strategy\workerRush.cpp" />
+    <ClCompile Include="strategy\shallowTwo.cpp" />
+    <ClCompile Include="strategy\earlyRunBy.cpp" />
+    <ClCompile Include="strategy\workerDefense.cpp" />
+    <ClCompile Include="strategy\expand.cpp" />
+    <ClCompile Include="strategy\fight.cpp" />
+    <ClCompile Include="strategy\firstBarracksPlacement.cpp" />
+    <ClCompile Include="strategy\firstFactoryPlacement.cpp" />
+    <ClCompile Include="strategy\freeTurrets.cpp" />
+    <ClCompile Include="strategy\groupAttack.cpp" />
+    <ClCompile Include="strategy\groupAttackSCV.cpp" />
+    <ClCompile Include="strategy\killMines.cpp" />
+    <ClCompile Include="strategy\marineRush.cpp" />
+    <ClCompile Include="strategy\mineAttack.cpp" />
+    <ClCompile Include="strategy\mineSpots.cpp" />
+    <ClCompile Include="strategy\surround.cpp" />
+    <ClCompile Include="strategy\patrolBases.cpp" />
+    <ClCompile Include="strategy\dropThreat.cpp" />
+    <ClCompile Include="strategy\scan.cpp" />
+    <ClCompile Include="strategy\strat.cpp" />
+    <ClCompile Include="strategy\strategy.cpp" />
+    <ClCompile Include="strategy\unblockTraffic.cpp" />
+    <ClCompile Include="strategy\wraithAttack.cpp" />
+    <ClCompile Include="strategy\wraithRush.cpp" />
+    <ClCompile Include="strategy\zealotRush.cpp" />
+    <ClCompile Include="strategy\zerglingRush.cpp" />
+    <ClCompile Include="territory\vgridMap.cpp" />
+    <ClCompile Include="territory\stronghold.cpp" />
+    <ClCompile Include="territory\varea.cpp" />
+    <ClCompile Include="territory\vbase.cpp" />
+    <ClCompile Include="territory\vcp.cpp" />
+    <ClCompile Include="territory\vmap.cpp" />
+    <ClCompile Include="territory\wall.cpp" />
+    <ClCompile Include="units\academy.cpp" />
+    <ClCompile Include="units\armory.cpp" />
+    <ClCompile Include="units\army.cpp" />
+    <ClCompile Include="units\barracks.cpp" />
+    <ClCompile Include="units\bunker.cpp" />
+    <ClCompile Include="units\bwapiUnits.cpp" />
+    <ClCompile Include="units\cc.cpp" />
+    <ClCompile Include="units\comsat.cpp" />
+    <ClCompile Include="units\cost.cpp" />
+    <ClCompile Include="units\critters.cpp" />
+    <ClCompile Include="units\depot.cpp" />
+    <ClCompile Include="units\ebay.cpp" />
+    <ClCompile Include="units\expert.cpp" />
+    <ClCompile Include="units\faceOff.cpp" />
+    <ClCompile Include="units\factory.cpp" />
+    <ClCompile Include="units\fightSim.cpp" />
+    <ClCompile Include="units\him.cpp" />
+    <ClCompile Include="units\his.cpp" />
+    <ClCompile Include="units\me.cpp" />
+    <ClCompile Include="units\my.cpp" />
+    <ClCompile Include="units\production.cpp" />
+    <ClCompile Include="units\refinery.cpp" />
+    <ClCompile Include="units\scienceFacility.cpp" />
+    <ClCompile Include="units\shop.cpp" />
+    <ClCompile Include="units\starport.cpp" />
+    <ClCompile Include="units\tower.cpp" />
+    <ClCompile Include="units\turret.cpp" />
+    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="vect.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="behavior\airSniping.h" />
+    <ClInclude Include="behavior\collecting.h" />
+    <ClInclude Include="behavior\demolishing.h" />
+    <ClInclude Include="behavior\dropping.h" />
+    <ClInclude Include="behavior\dropping1T.h" />
+    <ClInclude Include="behavior\dropping1T1V.h" />
+    <ClInclude Include="behavior\fighting.h" />
+    <ClInclude Include="behavior\healing.h" />
+    <ClInclude Include="behavior\killingMine.h" />
+    <ClInclude Include="behavior\blocking.h" />
+    <ClInclude Include="behavior\checking.h" />
+    <ClInclude Include="behavior\destroying.h" />
+    <ClInclude Include="behavior\executing.h" />
+    <ClInclude Include="behavior\guarding.h" />
+    <ClInclude Include="behavior\laying.h" />
+    <ClInclude Include="behavior\layingBack.h" />
+    <ClInclude Include="behavior\patrollingBases.h" />
+    <ClInclude Include="behavior\behavior.h" />
+    <ClInclude Include="behavior\behaviorType.h" />
+    <ClInclude Include="behavior\chasing.h" />
+    <ClInclude Include="behavior\constructing.h" />
+    <ClInclude Include="behavior\defaultBehavior.h" />
+    <ClInclude Include="behavior\exploring.h" />
+    <ClInclude Include="behavior\fleeing.h" />
+    <ClInclude Include="behavior\harassing.h" />
+    <ClInclude Include="behavior\kiting.h" />
+    <ClInclude Include="behavior\mining.h" />
+    <ClInclude Include="behavior\raiding.h" />
+    <ClInclude Include="behavior\razing.h" />
+    <ClInclude Include="behavior\refining.h" />
+    <ClInclude Include="behavior\repairing.h" />
+    <ClInclude Include="behavior\retraiting.h" />
+    <ClInclude Include="behavior\scouting.h" />
+    <ClInclude Include="behavior\sieging.h" />
+    <ClInclude Include="behavior\sniping.h" />
+    <ClInclude Include="behavior\supplementing.h" />
+    <ClInclude Include="behavior\vchasing.h" />
+    <ClInclude Include="behavior\walking.h" />
+    <ClInclude Include="bwem\EasyBMP_1.06\EasyBMP.h" />
+    <ClInclude Include="bwem\src\area.h" />
+    <ClInclude Include="bwem\src\base.h" />
+    <ClInclude Include="bwem\src\bwapiExt.h" />
+    <ClInclude Include="bwem\src\bwem.h" />
+    <ClInclude Include="bwem\src\cp.h" />
+    <ClInclude Include="bwem\src\defs.h" />
+    <ClInclude Include="bwem\src\examples.h" />
+    <ClInclude Include="bwem\src\exampleWall.h" />
+    <ClInclude Include="bwem\src\graph.h" />
+    <ClInclude Include="bwem\src\gridMap.h" />
+    <ClInclude Include="bwem\src\map.h" />
+    <ClInclude Include="bwem\src\mapDrawer.h" />
+    <ClInclude Include="bwem\src\mapImpl.h" />
+    <ClInclude Include="bwem\src\mapPrinter.h" />
+    <ClInclude Include="bwem\src\neutral.h" />
+    <ClInclude Include="bwem\src\tiles.h" />
+    <ClInclude Include="bwem\src\utils.h" />
+    <ClInclude Include="bwem\src\winutils.h" />
+    <ClInclude Include="debug.h" />
+    <ClInclude Include="defs.h" />
+    <ClInclude Include="infoDrawer.h" />
+    <ClInclude Include="interactive.h" />
+    <ClInclude Include="Iron.h" />
+    <ClInclude Include="myassert.h" />
+    <ClInclude Include="strategy\baseDefense.h" />
+    <ClInclude Include="strategy\berserker.h" />
+    <ClInclude Include="strategy\cannonRush.h" />
+    <ClInclude Include="strategy\dragoonRush.h" />
+    <ClInclude Include="strategy\firstDepotPlacement.h" />
+    <ClInclude Include="strategy\goliathRush.h" />
+    <ClInclude Include="strategy\lateCore.h" />
+    <ClInclude Include="strategy\massHydra.h" />
+    <ClInclude Include="strategy\protossGreedy.h" />
+    <ClInclude Include="strategy\secondDepotPlacement.h" />
+    <ClInclude Include="strategy\stone.h" />
+    <ClInclude Include="strategy\terranFastExpand.h" />
+    <ClInclude Include="strategy\walling.h" />
+    <ClInclude Include="strategy\workerRush.h" />
+    <ClInclude Include="strategy\shallowTwo.h" />
+    <ClInclude Include="strategy\earlyRunBy.h" />
+    <ClInclude Include="strategy\workerDefense.h" />
+    <ClInclude Include="strategy\expand.h" />
+    <ClInclude Include="strategy\fight.h" />
+    <ClInclude Include="strategy\firstBarracksPlacement.h" />
+    <ClInclude Include="strategy\firstFactoryPlacement.h" />
+    <ClInclude Include="strategy\freeTurrets.h" />
+    <ClInclude Include="strategy\groupAttack.h" />
+    <ClInclude Include="strategy\groupAttackSCV.h" />
+    <ClInclude Include="strategy\killMines.h" />
+    <ClInclude Include="strategy\marineRush.h" />
+    <ClInclude Include="strategy\mineAttack.h" />
+    <ClInclude Include="strategy\mineSpots.h" />
+    <ClInclude Include="strategy\surround.h" />
+    <ClInclude Include="strategy\patrolBases.h" />
+    <ClInclude Include="strategy\dropThreat.h" />
+    <ClInclude Include="strategy\scan.h" />
+    <ClInclude Include="strategy\strat.h" />
+    <ClInclude Include="strategy\strategy.h" />
+    <ClInclude Include="strategy\unblockTraffic.h" />
+    <ClInclude Include="strategy\wraithAttack.h" />
+    <ClInclude Include="strategy\wraithRush.h" />
+    <ClInclude Include="strategy\zealotRush.h" />
+    <ClInclude Include="strategy\zerglingRush.h" />
+    <ClInclude Include="territory\vgridMap.h" />
+    <ClInclude Include="territory\stronghold.h" />
+    <ClInclude Include="territory\varea.h" />
+    <ClInclude Include="territory\vbase.h" />
+    <ClInclude Include="territory\vcp.h" />
+    <ClInclude Include="territory\vmap.h" />
+    <ClInclude Include="territory\wall.h" />
+    <ClInclude Include="units\academy.h" />
+    <ClInclude Include="units\armory.h" />
+    <ClInclude Include="units\army.h" />
+    <ClInclude Include="units\barracks.h" />
+    <ClInclude Include="units\bunker.h" />
+    <ClInclude Include="units\bwapiUnits.h" />
+    <ClInclude Include="units\cc.h" />
+    <ClInclude Include="units\comsat.h" />
+    <ClInclude Include="units\cost.h" />
+    <ClInclude Include="units\critters.h" />
+    <ClInclude Include="units\depot.h" />
+    <ClInclude Include="units\ebay.h" />
+    <ClInclude Include="units\expert.h" />
+    <ClInclude Include="units\faceOff.h" />
+    <ClInclude Include="units\factory.h" />
+    <ClInclude Include="units\fightSim.h" />
+    <ClInclude Include="units\him.h" />
+    <ClInclude Include="units\his.h" />
+    <ClInclude Include="units\me.h" />
+    <ClInclude Include="units\my.h" />
+    <ClInclude Include="units\production.h" />
+    <ClInclude Include="units\refinery.h" />
+    <ClInclude Include="units\scienceFacility.h" />
+    <ClInclude Include="units\shop.h" />
+    <ClInclude Include="units\starport.h" />
+    <ClInclude Include="units\tower.h" />
+    <ClInclude Include="units\turret.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="vect.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="bwem\LICENSE.txt" />
+    <Text Include="bwem\README.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2E63AE74-758A-4607-9DE4-D28E814A6E13}</ProjectGuid>
+    <RootNamespace>ExampleAIModule</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>ChimeraBot</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NOMINMAX;WIN32;_WIN32_WINNT=0x0501;NTDDI_VERSION=0x05010300;_DEBUG;_WINDOWS;_USRDLL;EXAMPLEAIMODULE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <PreLinkEvent />
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>../lib/BWAPId.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NOMINMAX;WIN32;_WIN32_WINNT=0x0501;NTDDI_VERSION=0x05010300;NDEBUG;_WINDOWS;_USRDLL;EXAMPLEAIMODULE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <PreLinkEvent />
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>../lib/BWAPI.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\BotsManager.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\airSniping.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\behavior.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\behaviorType.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\blocking.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\chasing.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\checking.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\collecting.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\constructing.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\defaultBehavior.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\demolishing.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\destroying.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\dropping.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\dropping1T.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\dropping1T1V.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\executing.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\exploring.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\fighting.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\fleeing.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\guarding.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\harassing.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\healing.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\killingMine.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\kiting.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\laying.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\layingBack.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\mining.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\patrollingBases.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\raiding.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\razing.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\refining.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\repairing.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\retraiting.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\scouting.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\sieging.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\sniping.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\supplementing.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\vchasing.cpp" />
+    <ClCompile Include="Source\Bots\Iron\behavior\walking.cpp" />
+    <ClCompile Include="Source\Bots\Iron\debug.cpp" />
+    <ClCompile Include="Source\Bots\Iron\infoDrawer.cpp" />
+    <ClCompile Include="Source\Bots\Iron\interactive.cpp" />
+    <ClCompile Include="Source\Bots\Iron\Iron.cpp" />
+    <ClCompile Include="Source\Bots\Iron\myassert.cpp" />
+    <ClCompile Include="Source\Bots\Iron\Source.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\baseDefense.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\berserker.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\cannonRush.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\dragoonRush.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\dropThreat.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\earlyRunBy.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\expand.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\fight.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\firstBarracksPlacement.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\firstDepotPlacement.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\firstFactoryPlacement.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\freeTurrets.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\goliathRush.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\groupAttack.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\groupAttackSCV.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\killMines.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\lateCore.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\marineRush.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\massHydra.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\mineAttack.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\mineSpots.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\patrolBases.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\protossGreedy.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\scan.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\secondDepotPlacement.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\shallowTwo.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\stone.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\strat.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\strategy.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\surround.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\terranFastExpand.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\unblockTraffic.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\walling.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\workerDefense.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\workerRush.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\wraithAttack.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\wraithRush.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\zealotRush.cpp" />
+    <ClCompile Include="Source\Bots\Iron\strategy\zerglingRush.cpp" />
+    <ClCompile Include="Source\Bots\Iron\territory\stronghold.cpp" />
+    <ClCompile Include="Source\Bots\Iron\territory\varea.cpp" />
+    <ClCompile Include="Source\Bots\Iron\territory\vbase.cpp" />
+    <ClCompile Include="Source\Bots\Iron\territory\vcp.cpp" />
+    <ClCompile Include="Source\Bots\Iron\territory\vgridMap.cpp" />
+    <ClCompile Include="Source\Bots\Iron\territory\vmap.cpp" />
+    <ClCompile Include="Source\Bots\Iron\territory\wall.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\academy.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\armory.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\army.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\barracks.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\bunker.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\bwapiUnits.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\cc.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\comsat.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\cost.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\critters.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\depot.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\ebay.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\expert.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\faceOff.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\factory.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\fightSim.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\him.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\his.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\me.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\my.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\production.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\refinery.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\scienceFacility.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\shop.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\starport.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\tower.cpp" />
+    <ClCompile Include="Source\Bots\Iron\units\turret.cpp" />
+    <ClCompile Include="Source\Bots\Iron\ironutils.cpp" />
+    <ClCompile Include="Source\Bots\Iron\vect.cpp" />
+    <ClCompile Include="Source\Bots\McRave\BWEB\Block.cpp" />
+    <ClCompile Include="Source\Bots\McRave\BWEB\BWEB.cpp" />
+    <ClCompile Include="Source\Bots\McRave\BWEB\BWEBUtil.cpp" />
+    <ClCompile Include="Source\Bots\McRave\BWEB\PathFind.cpp" />
+    <ClCompile Include="Source\Bots\McRave\BWEB\Station.cpp" />
+    <ClCompile Include="Source\Bots\McRave\BWEB\BWEBWall.cpp" />
+    <ClCompile Include="Source\Bots\ZZK\ZZZKBotAIModule.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\area.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\base.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\BaseFinder\BaseFinder.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\bwapiExt.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\bwem.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\cp.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\exampleWall.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\graph.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\gridMap.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\map.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\mapDrawer.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\mapImpl.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\neutral.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\tiles.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\utils.cpp" />
+    <ClCompile Include="Source\SharedLibs\BWEM\winutils.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\BuildingInfo.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\BuildingManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\BuildOrder.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\CommandManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\EventManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\FAP.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\GridManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\Interface.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\McRave.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\PlayerInfo.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\PlayerManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\ProductionManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\ProtossBuildOrder.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\ProtossBuilds.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\ProtossMemes.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\PylonManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\ResourceInfo.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\ResourceManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\SpecialManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\StationManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\StrategyManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\TargetManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\TerrainManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\TerranBuildOrder.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\TerranBuilds.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\TransportInfo.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\TransportManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\UnitInfo.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\UnitManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\Util.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\WorkerInfo.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\WorkerManager.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\ZergBuildOrder.cpp" />
+    <ClCompile Include="Source\Bots\McRave\McRave\ZergBuilds.cpp" />
+    <ClCompile Include="Source\Dll.cpp" />
+    <ClCompile Include="Source\ChimeraBot.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\BotsManager.hpp" />
+    <ClInclude Include="Source\Bots\Iron\behavior\airSniping.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\behavior.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\behaviorType.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\blocking.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\chasing.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\checking.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\collecting.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\constructing.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\defaultBehavior.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\demolishing.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\destroying.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\dropping.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\dropping1T.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\dropping1T1V.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\executing.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\exploring.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\fighting.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\fleeing.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\guarding.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\harassing.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\healing.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\killingMine.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\kiting.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\laying.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\layingBack.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\mining.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\patrollingBases.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\raiding.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\razing.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\refining.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\repairing.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\retraiting.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\scouting.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\sieging.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\sniping.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\supplementing.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\vchasing.h" />
+    <ClInclude Include="Source\Bots\Iron\behavior\walking.h" />
+    <ClInclude Include="Source\Bots\Iron\debug.h" />
+    <ClInclude Include="Source\Bots\Iron\defs.h" />
+    <ClInclude Include="Source\Bots\Iron\infoDrawer.h" />
+    <ClInclude Include="Source\Bots\Iron\interactive.h" />
+    <ClInclude Include="Source\Bots\Iron\Iron.h" />
+    <ClInclude Include="Source\Bots\Iron\myassert.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\baseDefense.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\berserker.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\cannonRush.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\dragoonRush.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\dropThreat.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\earlyRunBy.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\expand.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\fight.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\firstBarracksPlacement.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\firstDepotPlacement.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\firstFactoryPlacement.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\freeTurrets.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\goliathRush.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\groupAttack.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\groupAttackSCV.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\killMines.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\lateCore.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\marineRush.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\massHydra.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\mineAttack.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\mineSpots.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\patrolBases.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\protossGreedy.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\scan.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\secondDepotPlacement.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\shallowTwo.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\stone.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\strat.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\strategy.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\surround.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\terranFastExpand.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\unblockTraffic.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\walling.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\workerDefense.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\workerRush.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\wraithAttack.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\wraithRush.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\zealotRush.h" />
+    <ClInclude Include="Source\Bots\Iron\strategy\zerglingRush.h" />
+    <ClInclude Include="Source\Bots\Iron\territory\stronghold.h" />
+    <ClInclude Include="Source\Bots\Iron\territory\varea.h" />
+    <ClInclude Include="Source\Bots\Iron\territory\vbase.h" />
+    <ClInclude Include="Source\Bots\Iron\territory\vcp.h" />
+    <ClInclude Include="Source\Bots\Iron\territory\vgridMap.h" />
+    <ClInclude Include="Source\Bots\Iron\territory\vmap.h" />
+    <ClInclude Include="Source\Bots\Iron\territory\wall.h" />
+    <ClInclude Include="Source\Bots\Iron\units\academy.h" />
+    <ClInclude Include="Source\Bots\Iron\units\armory.h" />
+    <ClInclude Include="Source\Bots\Iron\units\army.h" />
+    <ClInclude Include="Source\Bots\Iron\units\barracks.h" />
+    <ClInclude Include="Source\Bots\Iron\units\bunker.h" />
+    <ClInclude Include="Source\Bots\Iron\units\bwapiUnits.h" />
+    <ClInclude Include="Source\Bots\Iron\units\cc.h" />
+    <ClInclude Include="Source\Bots\Iron\units\comsat.h" />
+    <ClInclude Include="Source\Bots\Iron\units\cost.h" />
+    <ClInclude Include="Source\Bots\Iron\units\critters.h" />
+    <ClInclude Include="Source\Bots\Iron\units\depot.h" />
+    <ClInclude Include="Source\Bots\Iron\units\ebay.h" />
+    <ClInclude Include="Source\Bots\Iron\units\expert.h" />
+    <ClInclude Include="Source\Bots\Iron\units\faceOff.h" />
+    <ClInclude Include="Source\Bots\Iron\units\factory.h" />
+    <ClInclude Include="Source\Bots\Iron\units\fightSim.h" />
+    <ClInclude Include="Source\Bots\Iron\units\him.h" />
+    <ClInclude Include="Source\Bots\Iron\units\his.h" />
+    <ClInclude Include="Source\Bots\Iron\units\me.h" />
+    <ClInclude Include="Source\Bots\Iron\units\my.h" />
+    <ClInclude Include="Source\Bots\Iron\units\production.h" />
+    <ClInclude Include="Source\Bots\Iron\units\refinery.h" />
+    <ClInclude Include="Source\Bots\Iron\units\scienceFacility.h" />
+    <ClInclude Include="Source\Bots\Iron\units\shop.h" />
+    <ClInclude Include="Source\Bots\Iron\units\starport.h" />
+    <ClInclude Include="Source\Bots\Iron\units\tower.h" />
+    <ClInclude Include="Source\Bots\Iron\units\turret.h" />
+    <ClInclude Include="Source\Bots\Iron\ironutils.h" />
+    <ClInclude Include="Source\Bots\Iron\vect.h" />
+    <ClInclude Include="Source\Bots\McRave\BWEB\Block.h" />
+    <ClInclude Include="Source\Bots\McRave\BWEB\BWEB.h" />
+    <ClInclude Include="Source\Bots\McRave\BWEB\Station.h" />
+    <ClInclude Include="Source\Bots\McRave\BWEB\BWEBWall.h" />
+    <ClInclude Include="Source\Bots\ZZK\ZZZKBotAIModule.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\area.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\base.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\BaseFinder\BaseFinder.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\bwapiExt.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\bwem.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\cp.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\defs.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\exampleWall.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\graph.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\gridMap.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\map.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\mapDrawer.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\mapImpl.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\neutral.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\tiles.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\utils.h" />
+    <ClInclude Include="Source\SharedLibs\BWEM\winutils.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\BuildingInfo.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\BuildingManager.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\BuildOrder.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\CommandManager.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\FAP.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\GridManager.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\Header.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\Interface.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\McRave.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\PlayerInfo.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\PlayerManager.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\ProductionManager.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\PylonManager.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\ResourceInfo.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\ResourceManager.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\Singleton.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\StationManager.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\StrategyManager.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\TargetManager.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\TerrainManager.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\TransportInfo.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\TransportManager.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\UnitInfo.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\UnitManager.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\Util.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\WorkerInfo.h" />
+    <ClInclude Include="Source\Bots\McRave\McRave\WorkerManager.h" />
+    <ClInclude Include="Source\ChimeraBot.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

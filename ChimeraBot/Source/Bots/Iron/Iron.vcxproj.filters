@@ -1,0 +1,938 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers sources\behavior">
+      <UniqueIdentifier>{90c40163-9171-43b4-a334-34542b84b4d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\BWEM">
+      <UniqueIdentifier>{e38f4864-5d57-447a-8a23-d217441aa872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\BWEM\doc">
+      <UniqueIdentifier>{169811b5-c807-4cf2-ace1-f55a2bf13dd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\BWEM\src">
+      <UniqueIdentifier>{4e522014-9c76-4293-bded-2155a112db03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\territory">
+      <UniqueIdentifier>{fba963dc-9f4b-403f-8431-4fbedf002e4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\units">
+      <UniqueIdentifier>{b1764ad7-84c0-4c34-bdae-5143ce2acad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\BWEM\doc\html">
+      <UniqueIdentifier>{3fece946-e9a2-4905-9852-50415ac46610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\BWEM\EasyBMP">
+      <UniqueIdentifier>{70196a94-1376-4bb4-b875-8ab39124be77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\strategy">
+      <UniqueIdentifier>{bfd9cf61-93c8-47fd-9b3d-60d6adb0bb4e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bwem\doc\html\about.html">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </None>
+    <None Include="bwem\doc\html\download.html">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </None>
+    <None Include="bwem\doc\html\faq.html">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </None>
+    <None Include="bwem\doc\html\features.html">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </None>
+    <None Include="bwem\doc\html\help.html">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </None>
+    <None Include="bwem\doc\html\index.html">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </None>
+    <None Include="bwem\doc\html\start.html">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </None>
+    <None Include="bwem\doc\html\Stone.html">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </None>
+    <None Include="bwem\doc\html\style.css">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </None>
+    <None Include="C:\Program Files (x86)\StarCraft\bwapi-data\bwapi.ini">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="bwem\doc\html\Iron.html">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </None>
+    <None Include="bwem\doc\html\interactiveIron.html">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="bwem\doc\html\Andromeda.png">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </Image>
+    <Image Include="bwem\doc\html\Baby Steps.png">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </Image>
+    <Image Include="bwem\doc\html\Iron.jpg">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </Image>
+    <Image Include="bwem\doc\html\Great Barrier Reef.png">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </Image>
+    <Image Include="bwem\doc\html\Heartbreak Ridge.png">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </Image>
+    <Image Include="bwem\doc\html\Ride of Valkyries.png">
+      <Filter>Fichiers sources\BWEM\doc\html</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bwem\src\area.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\base.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\bwapiExt.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\bwem.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\cp.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\examples.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\graph.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\map.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\mapDrawer.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\mapImpl.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\mapPrinter.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\neutral.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\tiles.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\utils.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\winutils.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\EasyBMP_1.06\EasyBMP.cpp">
+      <Filter>Fichiers sources\BWEM\EasyBMP</Filter>
+    </ClCompile>
+    <ClCompile Include="units\bwapiUnits.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\critters.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\faceOff.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\him.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\his.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\me.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\my.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="territory\stronghold.cpp">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClCompile>
+    <ClCompile Include="territory\varea.cpp">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClCompile>
+    <ClCompile Include="territory\vbase.cpp">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClCompile>
+    <ClCompile Include="territory\vcp.cpp">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClCompile>
+    <ClCompile Include="territory\vmap.cpp">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\behavior.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\chasing.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\constructing.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\defaultBehavior.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\fleeing.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\harassing.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\mining.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\repairing.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\scouting.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\walking.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="infoDrawer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Iron.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="myassert.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="vect.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="units\production.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\expert.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\cost.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\barracks.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\cc.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\depot.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\refinery.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\refining.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="units\factory.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\shop.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\kiting.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\vchasing.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\strategy.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\groupAttack.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\groupAttackSCV.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\zerglingRush.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\strat.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\gridMap.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="territory\vgridMap.cpp">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\exploring.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\supplementing.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\behaviorType.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="units\ebay.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\sieging.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="units\turret.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\freeTurrets.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\dragoonRush.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\marineRush.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\unblockTraffic.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\raiding.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\patrollingBases.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\patrolBases.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\razing.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\zealotRush.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\cannonRush.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\firstFactoryPlacement.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\expand.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\mineAttack.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\destroying.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\blocking.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\checking.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="units\army.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\baseDefense.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\dropThreat.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\guarding.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\firstBarracksPlacement.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="units\starport.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\tower.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\wraithAttack.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\retraiting.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\mineSpots.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="units\armory.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\scienceFacility.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\bunker.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\sniping.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="units\academy.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="units\comsat.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\scan.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\earlyRunBy.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\killMines.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\executing.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\killingMine.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\laying.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\fighting.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\wraithRush.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="units\fightSim.cpp">
+      <Filter>Fichiers sources\units</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\fight.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\berserker.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\layingBack.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\surround.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\healing.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\shallowTwo.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\lateCore.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\workerRush.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\terranFastExpand.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\workerDefense.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\firstDepotPlacement.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="territory\wall.cpp">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\walling.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\airSniping.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\dropping1T.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\collecting.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\dropping1T1V.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\dropping.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\secondDepotPlacement.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="bwem\src\exampleWall.cpp">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClCompile>
+    <ClCompile Include="interactive.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\protossGreedy.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\massHydra.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\goliathRush.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\stone.cpp">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior\demolishing.cpp">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bwem\src\area.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\base.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\bwapiExt.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\bwem.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\cp.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\defs.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\examples.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\graph.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\map.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\mapDrawer.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\mapImpl.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\mapPrinter.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\neutral.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\tiles.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\utils.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\winutils.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\EasyBMP_1.06\EasyBMP.h">
+      <Filter>Fichiers sources\BWEM\EasyBMP</Filter>
+    </ClInclude>
+    <ClInclude Include="units\bwapiUnits.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\critters.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\faceOff.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\him.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\his.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\me.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\my.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="territory\stronghold.h">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClInclude>
+    <ClInclude Include="territory\varea.h">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClInclude>
+    <ClInclude Include="territory\vbase.h">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClInclude>
+    <ClInclude Include="territory\vcp.h">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClInclude>
+    <ClInclude Include="territory\vmap.h">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\behavior.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\chasing.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\constructing.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\defaultBehavior.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\fleeing.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\harassing.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\mining.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\repairing.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\scouting.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\walking.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="defs.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="infoDrawer.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Iron.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="myassert.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="vect.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="units\production.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\expert.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\cost.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\barracks.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\cc.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\depot.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\refinery.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\refining.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="units\factory.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\shop.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\kiting.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\vchasing.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\strategy.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\groupAttack.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\groupAttackSCV.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\zerglingRush.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\strat.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\gridMap.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="territory\vgridMap.h">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\exploring.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\supplementing.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\behaviorType.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="units\ebay.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\sieging.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="units\turret.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\freeTurrets.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\dragoonRush.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\marineRush.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\unblockTraffic.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\raiding.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\patrollingBases.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\patrolBases.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\razing.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\zealotRush.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\cannonRush.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\firstFactoryPlacement.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\expand.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\mineAttack.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\destroying.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\blocking.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\checking.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="units\army.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\baseDefense.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\dropThreat.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\guarding.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\firstBarracksPlacement.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="units\starport.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\tower.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\wraithAttack.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\retraiting.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\mineSpots.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="units\armory.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\scienceFacility.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\bunker.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\sniping.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="units\academy.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="units\comsat.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\scan.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\earlyRunBy.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\killMines.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\executing.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\killingMine.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\laying.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\fighting.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\wraithRush.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="units\fightSim.h">
+      <Filter>Fichiers sources\units</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\fight.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\berserker.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\layingBack.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\surround.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\healing.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\shallowTwo.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\lateCore.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\workerRush.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\terranFastExpand.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="interactive.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\workerDefense.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\firstDepotPlacement.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="territory\wall.h">
+      <Filter>Fichiers sources\territory</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\walling.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\airSniping.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\dropping1T.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\collecting.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\dropping1T1V.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\dropping.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\secondDepotPlacement.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="bwem\src\exampleWall.h">
+      <Filter>Fichiers sources\BWEM\src</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\protossGreedy.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\massHydra.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\goliathRush.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\stone.h">
+      <Filter>Fichiers sources\strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="behavior\demolishing.h">
+      <Filter>Fichiers sources\behavior</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="bwem\LICENSE.txt">
+      <Filter>Fichiers sources\BWEM</Filter>
+    </Text>
+    <Text Include="bwem\README.txt">
+      <Filter>Fichiers sources\BWEM</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
