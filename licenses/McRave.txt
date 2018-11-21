@@ -1,2 +1,3 @@
 Copyright 2018 Christian McCrave, all rights reserved.
-Currently Its based on his AIIDE submission source code from which I got permission from him
+Currently Its based on his AIIDE submission source code from which I got permission from him. Thanks Christian!
+https://github.com/Cmccrave/McRave
