@@ -4,6 +4,8 @@ VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChimeraBot", "ChimeraBot\ChimeraBot.vcxproj", "{2E63AE74-758A-4607-9DE4-D28E814A6E13}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZZZKBot", "ZZZKBot\ZZZKBot.vcxproj", "{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug_Pipeline|Win32 = Debug_Pipeline|Win32
@@ -29,6 +31,22 @@ Global
 		{2E63AE74-758A-4607-9DE4-D28E814A6E13}.Release_with_logging|Win32.Build.0 = Release|Win32
 		{2E63AE74-758A-4607-9DE4-D28E814A6E13}.Release|Win32.ActiveCfg = Release|Win32
 		{2E63AE74-758A-4607-9DE4-D28E814A6E13}.Release|Win32.Build.0 = Release|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Debug_Pipeline|Win32.ActiveCfg = Debug|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Debug_Pipeline|Win32.Build.0 = Debug|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Debug|Win32.Build.0 = Debug|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Installer_Target|Win32.ActiveCfg = Release|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Installer_Target|Win32.Build.0 = Release|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Release_Pipeline|Win32.ActiveCfg = Release|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Release_Pipeline|Win32.Build.0 = Release|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Release_Server_DLL|Win32.ActiveCfg = Release|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Release_Server_DLL|Win32.Build.0 = Release|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Release_Server|Win32.ActiveCfg = Release|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Release_Server|Win32.Build.0 = Release|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Release_with_logging|Win32.ActiveCfg = Release|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Release_with_logging|Win32.Build.0 = Release|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Release|Win32.ActiveCfg = Release|Win32
+		{87D70ACE-E47B-4FA8-AD31-C82D1C70D1E3}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

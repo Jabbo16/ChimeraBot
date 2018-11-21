@@ -148,7 +148,7 @@ namespace McRave
 		for (auto &u : Units().getMyUnits()) {
 			UnitInfo &unit = u.second;
 
-			bool attackCooldown = (Broodwar->getFrameCount() - unit.getLastAttackFrame() <= unit.getMinStopFrame() - Broodwar->getRemainingLatencyFrames());
+			bool attackCooldown = (Broodwar->getFrameCount() - unit.getLastAttackFrame() <= unit.getMinStopFrame() - Broodwar->getLatencyFrames());
 			//if (Broodwar->getFrameCount() % Broodwar->getLatencyFrames() != 0)
 				//continue;
 

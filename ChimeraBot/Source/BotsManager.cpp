@@ -2,6 +2,26 @@
 
 namespace ChimeraBot
 {
+
+	BWAPI::AIModule* BotsManager::loadAIModule(const string& moduleName) {
+		//the signature of the function that creates an AI module
+		using PFNCreateAI = BWAPI::AIModule* (*)(BWAPI::Game*);
+		using PFNGameInit = void(*)(BWAPI::Game*);
+		const auto path = "bwapi-data/AI/" + moduleName + ".dll";
+		const auto hDLL = LoadLibrary(path.c_str());
+		if (hDLL != NULL) {
+			// Obtain the AI module function
+			const auto newAIModule = PFNCreateAI(GetProcAddress(hDLL, "newAIModule"));
+			// The two lines below are needed in BWAPI >= 4.1.2
+			const auto gameInitFunction = PFNGameInit(GetProcAddress(hDLL, "gameInit"));
+			gameInitFunction(BroodwarPtr);
+			if (newAIModule) {
+				return newAIModule(BroodwarPtr);
+			}
+		}
+		return new AIModule();
+	}
+
 	void BotsManager::chooseBot()
 	{
 		switch (Broodwar->self()->getRace())
@@ -14,10 +34,9 @@ namespace ChimeraBot
 			chosenBot.emplace<iron::Iron*>(new iron::Iron{});
 			chosenBotEnum = Iron;
 			break;
-		
 		case Races::Zerg:
-			chosenBot.emplace<ZZZKBotAIModule>(ZZZKBotAIModule{});
-			chosenBotEnum = ZZK;
+			chosenBot.emplace<AIModule*>(loadAIModule("ZZZKBot"));
+			chosenBotEnum = ZZZKBot;
 			break;
 		}
 	}
@@ -37,14 +56,14 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onStart();
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onStart();
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onStart();
 			break;
 		default:;
 		}
 	}
 
-	void BotsManager::onEnd(bool isWinner)
+	void BotsManager::onEnd(const bool isWinner)
 	{
 		switch (chosenBotEnum)
 		{
@@ -54,8 +73,8 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onEnd(isWinner);
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onEnd(isWinner);
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onEnd(isWinner);
 			break;
 		default:;
 		}
@@ -71,14 +90,14 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onFrame();
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onFrame();
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onFrame();
 			break;
 		default:;
 		}
 	}
 
-	void BotsManager::onPlayerLeft(BWAPI::Player player)
+	void BotsManager::onPlayerLeft(const BWAPI::Player player)
 	{
 		switch (chosenBotEnum)
 		{
@@ -88,14 +107,14 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onPlayerLeft(player);
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onPlayerLeft(player);
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onPlayerLeft(player);
 			break;
 		default:;
 		}
 	}
 
-	void BotsManager::onNukeDetect(BWAPI::Position target)
+	void BotsManager::onNukeDetect(const BWAPI::Position target)
 	{
 		switch (chosenBotEnum)
 		{
@@ -105,8 +124,8 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onNukeDetect(target);
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onNukeDetect(target);
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onNukeDetect(target);
 			break;
 		default:;
 		}
@@ -122,8 +141,8 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onUnitDiscover(unit);
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onUnitDiscover(unit);
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onUnitDiscover(unit);
 			break;
 		default:;
 		}
@@ -139,8 +158,8 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onUnitEvade(unit);
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onUnitEvade(unit);
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onUnitEvade(unit);
 			break;
 		default:;
 		}
@@ -156,8 +175,8 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onUnitShow(unit);
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onUnitShow(unit);
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onUnitShow(unit);
 			break;
 		default:;
 		}
@@ -173,8 +192,8 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onUnitHide(unit);
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onUnitHide(unit);
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onUnitHide(unit);
 			break;
 		default:;
 		}
@@ -190,8 +209,8 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onUnitCreate(unit);
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onUnitCreate(unit);
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onUnitCreate(unit);
 			break;
 		default:;
 		}
@@ -207,8 +226,8 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onUnitDestroy(unit);
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onUnitDestroy(unit);
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onUnitDestroy(unit);
 			break;
 		default:;
 		}
@@ -224,8 +243,8 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onUnitMorph(unit);
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onUnitMorph(unit);
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onUnitMorph(unit);
 			break;
 		default:;
 		}
@@ -241,8 +260,8 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onUnitRenegade(unit);
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onUnitRenegade(unit);
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onUnitRenegade(unit);
 			break;
 		default:;
 		}
@@ -258,8 +277,8 @@ namespace ChimeraBot
 		case Iron:
 			std::get<iron::Iron*>(chosenBot)->onUnitComplete(unit);
 			break;
-		case ZZK:
-			std::get<ZZZKBotAIModule>(chosenBot).onUnitComplete(unit);
+		case ZZZKBot:
+			std::get<AIModule*>(chosenBot)->onUnitComplete(unit);
 			break;
 		default:;
 		}

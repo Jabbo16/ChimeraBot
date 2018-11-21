@@ -1,7 +1,7 @@
 #pragma once
-#include <BWAPI.h>
-#include "BotsManager.hpp"
 
+#include "BotsManager.hpp"
+#include <BWAPI.h>
 // Remember not to use "Broodwar" in any global class constructor!
 namespace ChimeraBot
 {

@@ -1,16 +1,17 @@
 #pragma once
 #include <variant>
+#include <Windows.h>
 #include <BWAPI.h>
 #include "Bots/McRave/McRave/Header.h"
-#include "Bots/Iron/Iron.h"
-#include "Bots/ZZK/ZZZKBotAIModule.h"
+#include "Bots/IronBot/Iron.h"
 
 namespace ChimeraBot
 {
 	class BotsManager
 	{
-		std::variant<McRaveModule, iron::Iron*, ZZZKBotAIModule> chosenBot{};
-		enum Bots{McRave, Iron, ZZK};
+		std::variant<McRaveModule, iron::Iron*, AIModule*> chosenBot{};
+		enum Bots{McRave, Iron, ZZZKBot};
+		BWAPI::AIModule * loadAIModule(const string& moduleName);
 		void chooseBot();
 		Bots chosenBotEnum{};
 	public:
