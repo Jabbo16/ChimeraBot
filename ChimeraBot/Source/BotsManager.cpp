@@ -7,7 +7,7 @@ namespace ChimeraBot
 		//the signature of the function that creates an AI module
 		using PFNCreateAI = BWAPI::AIModule* (*)(BWAPI::Game*);
 		using PFNGameInit = void(*)(BWAPI::Game*);
-		const auto path = "bwapi-data/AI/" + moduleName + ".dll";
+		const auto path = "bwapi-data/AI/bots/" + moduleName + ".dll";
 		const auto hDLL = LoadLibrary(path.c_str());
 		if (hDLL != NULL) {
 			// Obtain the AI module function
