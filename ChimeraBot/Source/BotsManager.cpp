@@ -27,17 +27,15 @@ namespace ChimeraBot
 		switch (Broodwar->self()->getRace())
 		{
 		case Races::Protoss:
-			chosenBot.emplace<McRaveModule>(McRaveModule{});
-			chosenBotEnum = McRave;
+			chosenBot = new McRaveModule{};
 			break;
 		case Races::Terran:
-			chosenBot.emplace<iron::Iron*>(new iron::Iron{});
-			chosenBotEnum = Iron;
+			chosenBot = new iron::Iron{};
 			break;
 		case Races::Zerg:
-			chosenBot.emplace<AIModule*>(loadAIModule("ZZZKBot"));
-			chosenBotEnum = ZZZKBot;
+			chosenBot = loadAIModule("ZZZKBot");
 			break;
+		default: ;
 		}
 	}
 
@@ -48,239 +46,71 @@ namespace ChimeraBot
 
 	void BotsManager::onStart()
 	{
-		switch(chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onStart();
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onStart();
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onStart();
-			break;
-		default:;
-		}
+		chosenBot->onStart();
 	}
 
 	void BotsManager::onEnd(const bool isWinner)
 	{
-		switch (chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onEnd(isWinner);
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onEnd(isWinner);
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onEnd(isWinner);
-			break;
-		default:;
-		}
+		chosenBot->onEnd(isWinner);
 	}
 
 	void BotsManager::onFrame()
 	{
-		switch (chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onFrame();
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onFrame();
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onFrame();
-			break;
-		default:;
-		}
+		chosenBot->onFrame();
 	}
 
 	void BotsManager::onPlayerLeft(const BWAPI::Player player)
 	{
-		switch (chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onPlayerLeft(player);
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onPlayerLeft(player);
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onPlayerLeft(player);
-			break;
-		default:;
-		}
+		chosenBot->onPlayerLeft(player);
 	}
 
 	void BotsManager::onNukeDetect(const BWAPI::Position target)
 	{
-		switch (chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onNukeDetect(target);
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onNukeDetect(target);
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onNukeDetect(target);
-			break;
-		default:;
-		}
+		chosenBot->onNukeDetect(target);
 	}
 
 	void BotsManager::onUnitDiscover(BWAPI::Unit unit)
 	{
-		switch (chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onUnitDiscover(unit);
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onUnitDiscover(unit);
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onUnitDiscover(unit);
-			break;
-		default:;
-		}
+		chosenBot->onUnitDiscover(unit);
 	}
 
 	void BotsManager::onUnitEvade(BWAPI::Unit unit)
 	{
-		switch (chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onUnitEvade(unit);
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onUnitEvade(unit);
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onUnitEvade(unit);
-			break;
-		default:;
-		}
+		chosenBot->onUnitEvade(unit);
 	}
 
 	void BotsManager::onUnitShow(BWAPI::Unit unit)
 	{
-		switch (chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onUnitShow(unit);
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onUnitShow(unit);
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onUnitShow(unit);
-			break;
-		default:;
-		}
+		chosenBot->onUnitShow(unit);
 	}
 
 	void BotsManager::onUnitHide(BWAPI::Unit unit)
 	{
-		switch (chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onUnitHide(unit);
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onUnitHide(unit);
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onUnitHide(unit);
-			break;
-		default:;
-		}
+		chosenBot->onUnitHide(unit);
 	}
 
 	void BotsManager::onUnitCreate(BWAPI::Unit unit)
 	{
-		switch (chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onUnitCreate(unit);
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onUnitCreate(unit);
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onUnitCreate(unit);
-			break;
-		default:;
-		}
+		chosenBot->onUnitCreate(unit);
 	}
 
 	void BotsManager::onUnitDestroy(BWAPI::Unit unit)
 	{
-		switch (chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onUnitDestroy(unit);
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onUnitDestroy(unit);
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onUnitDestroy(unit);
-			break;
-		default:;
-		}
+		chosenBot->onUnitDestroy(unit);
 	}
 
 	void BotsManager::onUnitMorph(BWAPI::Unit unit)
 	{
-		switch (chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onUnitMorph(unit);
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onUnitMorph(unit);
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onUnitMorph(unit);
-			break;
-		default:;
-		}
+		chosenBot->onUnitMorph(unit);
 	}
 
 	void BotsManager::onUnitRenegade(BWAPI::Unit unit)
 	{
-		switch (chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onUnitRenegade(unit);
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onUnitRenegade(unit);
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onUnitRenegade(unit);
-			break;
-		default:;
-		}
+		chosenBot->onUnitRenegade(unit);
 	}
 
 	void BotsManager::onUnitComplete(BWAPI::Unit unit)
 	{
-		switch (chosenBotEnum)
-		{
-		case McRave:
-			std::get<McRaveModule>(chosenBot).onUnitComplete(unit);
-			break;
-		case Iron:
-			std::get<iron::Iron*>(chosenBot)->onUnitComplete(unit);
-			break;
-		case ZZZKBot:
-			std::get<AIModule*>(chosenBot)->onUnitComplete(unit);
-			break;
-		default:;
-		}
+		chosenBot->onUnitComplete(unit);
 	}
 }

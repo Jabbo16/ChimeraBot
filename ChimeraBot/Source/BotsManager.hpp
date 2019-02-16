@@ -9,11 +9,9 @@ namespace ChimeraBot
 {
 	class BotsManager
 	{
-		std::variant<McRaveModule, iron::Iron*, AIModule*> chosenBot{};
-		enum Bots{McRave, Iron, ZZZKBot};
+		AIModule* chosenBot;
 		BWAPI::AIModule * loadAIModule(const string& moduleName);
 		void chooseBot();
-		Bots chosenBotEnum{};
 	public:
 		BotsManager();
 		void onStart();
