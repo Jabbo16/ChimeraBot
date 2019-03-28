@@ -27,7 +27,7 @@ namespace ChimeraBot
 		switch (Broodwar->self()->getRace())
 		{
 		case Races::Protoss:
-			chosenBot = new McRaveModule{};
+			chosenBot = loadAIModule("McRave");
 			break;
 		case Races::Terran:
 			chosenBot = new iron::Iron{};

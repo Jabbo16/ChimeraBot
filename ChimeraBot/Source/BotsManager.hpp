@@ -2,7 +2,6 @@
 #include <variant>
 #include <Windows.h>
 #include <BWAPI.h>
-#include "Bots/McRave/McRave/Header.h"
 #include "Bots/IronBot/Iron.h"
 
 namespace ChimeraBot
